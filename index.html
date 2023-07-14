@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/js/bootstrap.min.js"></script>
+
+    <script src="https://unpkg.com/ml5@0.4.3/dist/ml5.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/webcamjs/1.0.26/webcam.js"></script>
+    <link rel="stylesheet" href="style.css">
+    <title>Document</title>
+</head>
+<body>
+    <center>
+    <div>
+        <div id="div_emojis" class="btn">
+            <h4>Aplicación para hacer gestos</h4>
+            <span>✌️</span>
+            <span>👍</span>
+            <span>🤞</span>
+            <span>👌</span>
+        </div>
+        <h6>Toma tu foto para un emoji</h6>
+        <p id="conejo">Hiciste un conejo?</p>
+        <p id="like">Hiciste un like?</p>
+        <p id="corazón">Hiciste un corazón?</p>
+        <p id="especial">Hiciste un especial?</p>
+        <br>
+        <br>
+
+        <div class="col-md-4 col-sm-12 col-xs-12">
+            <label for="">Vista de la cámara</label>
+            <div id="Camera"></div>
+            <button onclick="take_snapshot()">Capturar imagen</button>
+        </div>
+
+        <div class="col-md-4 col-sm-12 col-xs-12">
+        <label for="">Predicción-1</label>
+        <p id="Gesto"></p>
+        <p id="Emoji"></p>
+
+        <label for="">Predicción-2</label>
+        <p id="Gesto2"></p>
+        <p id="Emoji2"></p>
+        </div>
+
+        <div class="col-md-4 col-sm-12 col-xs-12">
+            <label for="">Instantanea</label>
+            <div id="Resultado"></div>
+            <button onclick="check()">Identificar gesto</button>
+        </div>
+    </div>
+    <script src="main.js"></script>
+    </center>
+</body>
+</html>
